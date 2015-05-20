@@ -1,0 +1,2 @@
+#!/bin/sh
+chromium-browser --prox-pac-url=http://wpad.lanl.gov/wpad.dat
