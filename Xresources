@@ -5,12 +5,12 @@ URxvt*scrollstyle: plain
 URxvt*scrollBar: false
 URxvt.font: xft:Anonymous Pro:size=14
 
+!*.font: xft:Anonymous Pro:size=14
+
 !!Emacs Settings
 !!Mostly used for fonts
-Emacs.FontBackend: xft
-Emacs.font: Anonymous Pro-14
-
-*.font: xft:Anonymous Pro:size=14
+!Emacs.FontBackend: xft
+!Emacs.font: Anonymous Pro-14
 
 !!SOLARIZED COLOR THEME
 !!Source http://github.com/altercation/solarized 
