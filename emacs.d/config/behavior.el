@@ -71,6 +71,13 @@
   (smex-initialize)
   (setq smex-prompt-string "λ: "))
 
+;;
+;; Inc / Dec numbers with C-c +/-
+;;
+(use-package evil-numbers
+  :ensure t
+  :bind (("C-c +" . evil-numbers/inc-at-pt)
+         ("C-c -" . evil-numbers/dec-at-pt)))
 
 ;;
 ;; Hastbin
