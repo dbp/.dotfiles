@@ -11,6 +11,13 @@
   :diminish auto-complete-mode)
 
 ;;
+;; Acejump mode lets me move around the screen quickly
+;;
+(use-package ace-jump-mode
+  :ensure t
+  :bind ("C-." . ace-jump-mode))
+
+;;
 ;; YAS
 ;;
 (use-package yasnippet
@@ -129,9 +136,6 @@
 ;;  (add-hook 'font-lock-mode-hook (lambda () (fci-mode 80)))
 ;;  :config
 ;;  (setq fci-rule-column 80))
-
-
-
 
 ;; Don't use messages that you don't read
 (setq initial-scratch-message "")
