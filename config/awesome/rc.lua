@@ -10,6 +10,7 @@ require("naughty")
 -- Load Debian menu entries
 require("debian.menu")
 
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -218,6 +219,9 @@ globalkeys = awful.util.table.join(
             end
         end),
 
+    -- Lock Screen
+    awful.key({modkey, "Control"}, "Tab", function() awful.util.spawn("xscreensaver-command -lock") end),
+
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.util.spawn("rxvt-unicode") end),
     awful.key({ modkey, "Control" }, "r", awesome.restart),
@@ -367,3 +371,6 @@ end)
 client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+awful.util.spawn_with_shell("xscreensaver -no-splash")
+awful.util.spawn_with_shell("fluxgui")
